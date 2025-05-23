@@ -71,7 +71,7 @@ function renderThumbnails() {
     thumb.setAttribute('disable-zoom', '');
     thumb.addEventListener('click', () => {
       currentIndex = index;
-      loadModel(models[currentIndex]);
+      loadModel(currentIndex);
       updateActiveThumbnail();
     });
     thumbnailsContainer.appendChild(thumb);
