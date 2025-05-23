@@ -1,0 +1,41 @@
+{
+  "name": "electron-3d-viewer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "set NODE_ENV=development && electron .",
+    "dist": "set NODE_ENV=production && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.electron3dviewer",
+    "productName": "3D Viewer",
+    "files": [
+      "**/*",
+      "!node_modules/**/*",
+      "models/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": []
+    },
+    "asarUnpack": [],
+    "publish": null,
+    "afterSign": null,
+    "asar": true,
+    "extraResources": [
+      {
+        "from": "models",
+        "to": "models"
+      }
+    ]
+  }
+}
