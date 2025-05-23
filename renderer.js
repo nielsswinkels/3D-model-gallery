@@ -69,6 +69,7 @@ function renderThumbnails() {
     thumb.setAttribute('src', modelPath);
     thumb.setAttribute('camera-controls', '');
     thumb.setAttribute('disable-zoom', '');
+    thumb.setAttribute('interaction-prompt', 'none');
     thumb.addEventListener('click', () => {
       currentIndex = index;
       loadModel(currentIndex);
