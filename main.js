@@ -8,9 +8,11 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
+      autoHideMenuBar: true,
       sandbox: false // ← this is the fix
     }
   });
+  win.setMenuBarVisibility(false);
 
   // const modelsPath = path.join(process.resourcesPath, 'models'); // in production
   // In dev, fallback to __dirname
